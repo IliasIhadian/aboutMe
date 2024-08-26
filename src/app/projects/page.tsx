@@ -8,6 +8,7 @@ import {
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
+import Image from "next/image";
 
 import Hero from "@/components/hero";
 import Sidebar from "@/components/sidebar";
@@ -29,6 +30,16 @@ export default function projects() {
           </div>
         </div>
       </AspectRatio>
+
+      <div className="absolute right-[40px] bottom-[10px]">
+        <Image
+          src="/signing.png"
+          alt={"alt"}
+          width="50"
+          height="50"
+          className="rotate90"
+        ></Image>
+      </div>
     </main>
   );
 }

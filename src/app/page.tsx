@@ -1,7 +1,7 @@
 "use client";
 
 import { AspectRatio } from "@/components/ui/aspect-ratio";
-import { Button } from "@/components/ui/button";
+import Image from "next/image";
 import Sidebar from "@/components/sidebar";
 import Hero from "@/components/hero";
 
@@ -16,9 +16,25 @@ export default function Home() {
           <div className="">
             <Sidebar animate={"h"}></Sidebar>
           </div>
-          <div className="col-span-2"></div>
+          <div className="col-span-2">
+            <Image
+              src="/foreground.png"
+              alt={"alt"}
+              width="900"
+              height="900"
+            ></Image>
+          </div>
         </div>
       </AspectRatio>
+      <div className="absolute right-[40px] bottom-[10px]">
+        <Image
+          src="/signing.png"
+          alt={"alt"}
+          width="50"
+          height="50"
+          className="rotate90"
+        ></Image>
+      </div>
     </main>
   );
 }
