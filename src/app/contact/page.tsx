@@ -1,12 +1,14 @@
+import Hero from "@/components/hero";
+import Sidebar from "@/components/sidebar";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 export default function contact() {
   return (
     <main className="rounded p-8">
-      <AspectRatio
-        ratio={16 / 9}
-        className="	rounded-md border-2 border-black"
-      ></AspectRatio>
+      <AspectRatio ratio={16 / 9} className="	rounded-md border-2 border-black">
+        <Hero></Hero>
+        <Sidebar animate={"c"}></Sidebar>
+      </AspectRatio>
     </main>
   );
 }

@@ -1,21 +1,22 @@
 import Link from "next/link";
+import { useState } from "react";
 
-export default function Sidebar() {
+export default function Sidebar({ animate }) {
   return (
     <>
       <aside className="px-8">
         <ul className="py-2 ">
           <li className="hover:text-xl">
-            <Link href="/">Home</Link>
+            <Link href="/">{animate === "h" ? "➲" : "Home"}</Link>
           </li>
           <li className="hover:text-xl">
-            <Link href="/projects">Projects</Link>
+            <Link href="/projects">{animate === "p" ? "➲" : "Projects"}</Link>
           </li>
           <li className="hover:text-xl">
-            <Link href="/aboutme">About Me</Link>
+            <Link href="/aboutme">{animate === "a" ? "➲" : "About Me"}</Link>
           </li>
           <li className="hover:text-xl">
-            <Link href="/contact">Contact</Link>
+            <Link href="/contact">{animate === "c" ? "➲" : "Contact"}</Link>
           </li>
         </ul>
       </aside>
