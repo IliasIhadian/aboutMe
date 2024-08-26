@@ -1,10 +1,18 @@
-import Image from "next/image";
+import Navbar from "@/components/sidebar";
+import Link from "next/link";
+
+import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Button } from "@/components/ui/button";
+import Sidebar from "@/components/sidebar";
+import Hero from "@/components/hero";
 
 export default function Home() {
   return (
-    <main>
-      <h1> hi</h1>
+    <main className="rounded p-8">
+      <AspectRatio ratio={16 / 9} className="	rounded-md border-2 border-black">
+        <Hero></Hero>
+        <Sidebar></Sidebar>
+      </AspectRatio>
     </main>
   );
 }
