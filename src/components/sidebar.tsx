@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export default function Sidebar({ animate }) {
+export default function Sidebar({ animate }: { animate: any }) {
   return (
     <>
       <aside className="px-8">
