@@ -4,29 +4,72 @@ import { AspectRatio } from "@/components/ui/aspect-ratio";
 import Image from "next/image";
 import Sidebar from "@/components/sidebar";
 import Hero from "@/components/hero";
+import { useMediaQuery } from "react-responsive";
+
+const useDesktopMediaQuery = () =>
+  useMediaQuery({ query: "(min-width: 1280px)" });
+
+const useTabletAndBelowMediaQuery = () =>
+  useMediaQuery({ query: "(max-width: 1279px)" });
+
+const Desktop = ({ children }: { children: any }) => {
+  const isDesktop = useDesktopMediaQuery();
+
+  return isDesktop ? children : null;
+};
+
+const TabletAndBelow = ({ children }: { children: any }) => {
+  const isTabletAndBelow = useTabletAndBelowMediaQuery();
+
+  return isTabletAndBelow ? children : null;
+};
 
 export default function Home() {
   return (
     <main className="rounded p-8">
-      <AspectRatio ratio={16 / 9} className="	rounded-md border-2 border-black">
-        <div className="grid grid-cols-3 gap-4 ">
-          <div className="order-first col-span-3 ">
-            <Hero></Hero>
+      <div className="	rounded-md border-2 border-black">
+        <Desktop>
+          <div className="grid grid-cols-3 gap-4 ">
+            <div className="order-first col-span-3 ">
+              <Hero></Hero>
+            </div>
+
+            <div className="">
+              <Sidebar animate={"h"}></Sidebar>
+            </div>
+
+            <div className="col-span-2">
+              <Image
+                src="/foreground.png"
+                alt={"alt"}
+                width="900"
+                height="900"
+              ></Image>
+            </div>
           </div>
-          <div className="">
-            <Sidebar animate={"h"}></Sidebar>
+        </Desktop>
+        <TabletAndBelow>
+          <div className="grid ">
+            <div className="order-first">
+              <Hero></Hero>
+            </div>
+
+            <div className="">
+              <Sidebar animate={"h"}></Sidebar>
+            </div>
+
+            <div className="">
+              <Image
+                src="/foreground.png"
+                alt={"alt"}
+                width="900"
+                height="900"
+              ></Image>
+            </div>
           </div>
-          <div className="col-span-2">
-            <Image
-              src="/foreground.png"
-              alt={"alt"}
-              width="900"
-              height="900"
-            ></Image>
-          </div>
-        </div>
-      </AspectRatio>
-      <div className="absolute right-[40px] bottom-[10px]">
+        </TabletAndBelow>
+      </div>
+      <div className="absolute right-[40px] ">
         <Image
           src="/signing.png"
           alt={"alt"}

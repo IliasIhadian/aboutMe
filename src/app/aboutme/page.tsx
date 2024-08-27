@@ -1,39 +1,85 @@
-import Link from "next/link";
+"use client";
 import Image from "next/image";
-
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import Hero from "@/components/hero";
 import Sidebar from "@/components/sidebar";
 
+import { useMediaQuery } from "react-responsive";
+
+const useDesktopMediaQuery = () =>
+  useMediaQuery({ query: "(min-width: 1280px)" });
+
+const useTabletAndBelowMediaQuery = () =>
+  useMediaQuery({ query: "(max-width: 1279px)" });
+
+const Desktop = ({ children }: { children: any }) => {
+  const isDesktop = useDesktopMediaQuery();
+
+  return isDesktop ? children : null;
+};
+
+const TabletAndBelow = ({ children }: { children: any }) => {
+  const isTabletAndBelow = useTabletAndBelowMediaQuery();
+
+  return isTabletAndBelow ? children : null;
+};
+
 export default function aboutme() {
   return (
     <main className="rounded p-8">
-      <AspectRatio ratio={16 / 9} className="	rounded-md border-2 border-black">
-        <div className="grid grid-cols-3 gap-4 ">
-          <div className="order-first col-span-3 ">
-            <Hero></Hero>
-          </div>
-          <div className="">
-            <Sidebar animate={"a"}></Sidebar>
-          </div>
-          <div className="col-span-2">
-            <div className="grid grid-rows-2 gap-4">
-              <div>
-                <Text></Text>
-              </div>
-              <div className="grid grid-cols-2 gap-4">
+      <div className="rounded-md border-2 border-black">
+        <Desktop>
+          <div className="grid grid-cols-3 gap-4 ">
+            <div className="order-first col-span-3 ">
+              <Hero></Hero>
+            </div>
+            <div className="">
+              <Sidebar animate={"a"}></Sidebar>
+            </div>
+            <div className="col-span-2">
+              <div className="grid grid-rows-2 gap-4">
                 <div>
-                  <Education></Education>
+                  <Text></Text>
                 </div>
-                <div>
-                  <Skills></Skills>
+                <div className="grid grid-cols-2 gap-4">
+                  <div>
+                    <Education></Education>
+                  </div>
+                  <div>
+                    <Skills></Skills>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </AspectRatio>
-      <div className="absolute right-[40px] bottom-[10px]">
+        </Desktop>
+        <TabletAndBelow>
+          <div className="grid">
+            <div className="order-first  ">
+              <Hero></Hero>
+            </div>
+            <div className="">
+              <Sidebar animate={"a"}></Sidebar>
+            </div>
+            <div className="p-8">
+              <div className="grid grid-rows-2 gap-4">
+                <div>
+                  <Text></Text>
+                </div>
+                <div className="grid grid-cols-2 gap-8">
+                  <div>
+                    <Education></Education>
+                  </div>
+                  <div>
+                    <Skills></Skills>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </TabletAndBelow>
+      </div>
+      <div className="absolute right-[40px]">
         <Image
           src="/signing.png"
           alt={"alt"}
