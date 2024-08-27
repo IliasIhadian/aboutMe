@@ -66,7 +66,7 @@ export default function aboutme() {
                 <div>
                   <Text></Text>
                 </div>
-                <div className="grid grid-cols-2 gap-8">
+                <div className=" ">
                   <div>
                     <Education></Education>
                   </div>
