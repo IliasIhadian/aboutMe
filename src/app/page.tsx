@@ -5,6 +5,7 @@ import Image from "next/image";
 import Sidebar from "@/components/sidebar";
 import Hero from "@/components/hero";
 import { useMediaQuery } from "react-responsive";
+import Navbar from "@/components/navbar";
 
 const useDesktopMediaQuery = () =>
   useMediaQuery({ query: "(min-width: 1280px)" });
@@ -49,24 +50,14 @@ export default function Home() {
           </div>
         </Desktop>
         <TabletAndBelow>
-          <div className="grid ">
-            <div className="order-first">
-              <Hero></Hero>
-            </div>
-
-            <div className="">
-              <Sidebar animate={"h"}></Sidebar>
-            </div>
-
-            <div className="">
-              <Image
-                src="/foreground.png"
-                alt={"alt"}
-                width="900"
-                height="900"
-              ></Image>
-            </div>
-          </div>
+          <Hero></Hero>
+          <Navbar animate={"h"}></Navbar>
+          <Image
+            src="/foreground.png"
+            alt={"alt"}
+            width="900"
+            height="900"
+          ></Image>
         </TabletAndBelow>
       </div>
       <div className="absolute right-[40px] ">

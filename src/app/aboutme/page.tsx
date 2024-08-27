@@ -5,6 +5,7 @@ import Hero from "@/components/hero";
 import Sidebar from "@/components/sidebar";
 
 import { useMediaQuery } from "react-responsive";
+import Navbar from "@/components/navbar";
 
 const useDesktopMediaQuery = () =>
   useMediaQuery({ query: "(min-width: 1280px)" });
@@ -54,25 +55,19 @@ export default function aboutme() {
           </div>
         </Desktop>
         <TabletAndBelow>
-          <div className="grid">
-            <div className="order-first  ">
-              <Hero></Hero>
-            </div>
-            <div className="">
-              <Sidebar animate={"a"}></Sidebar>
-            </div>
-            <div className="p-8">
-              <div className="grid grid-rows-2 gap-4">
+          <Hero></Hero>
+          <Navbar animate={"a"}></Navbar>
+          <div className="p-8">
+            <div className="grid grid-rows-2 gap-4">
+              <div>
+                <Text></Text>
+              </div>
+              <div className=" ">
                 <div>
-                  <Text></Text>
+                  <Education></Education>
                 </div>
-                <div className=" ">
-                  <div>
-                    <Education></Education>
-                  </div>
-                  <div>
-                    <Skills></Skills>
-                  </div>
+                <div>
+                  <Skills></Skills>
                 </div>
               </div>
             </div>
@@ -96,7 +91,9 @@ function Text() {
   return (
     <>
       <div>
-        <h2 className="text-2xl">Hello my name is Ilias Ihadian</h2>
+        <h2 className="text-3xl font-extrabold">
+          Hello my name is Ilias Ihadian
+        </h2>
         <p className="pt-8 pr-8">
           I am a passionate software developer with a strong background in
           programming and algorithm development. I have experience in web

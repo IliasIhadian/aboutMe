@@ -13,6 +13,7 @@ import Image from "next/image";
 import Sidebar from "@/components/sidebar";
 import Hero from "@/components/hero";
 import { useMediaQuery } from "react-responsive";
+import Navbar from "@/components/navbar";
 
 const useDesktopMediaQuery = () =>
   useMediaQuery({ query: "(min-width: 1280px)" });
@@ -50,17 +51,11 @@ export default function projects() {
           </div>
         </Desktop>
         <TabletAndBelow>
-          <div className="grid">
-            <div className="order-first">
-              <Hero></Hero>
-            </div>
-            <div className="">
-              <Sidebar animate={"p"}></Sidebar>
-            </div>
-            <div className="">
-              <CardsTabletAndBelow></CardsTabletAndBelow>
-            </div>
-          </div>
+          <Hero></Hero>
+
+          <Navbar animate={"p"}></Navbar>
+
+          <CardsTabletAndBelow></CardsTabletAndBelow>
         </TabletAndBelow>
       </div>
 

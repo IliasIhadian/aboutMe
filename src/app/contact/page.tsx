@@ -1,5 +1,6 @@
 "use client";
 import Hero from "@/components/hero";
+import Navbar from "@/components/navbar";
 import Sidebar from "@/components/sidebar";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Button } from "@/components/ui/button";
@@ -44,17 +45,11 @@ export default function contact() {
           </div>
         </Desktop>
         <TabletAndBelow>
-          <div className="grid ">
-            <div className="order-first">
-              <Hero></Hero>
-            </div>
-            <div>
-              <Sidebar animate={"c"}></Sidebar>
-            </div>
-            <div>
-              <Text></Text>
-            </div>
-          </div>
+          <Hero></Hero>
+
+          <Navbar animate={"c"}></Navbar>
+
+          <Text></Text>
         </TabletAndBelow>
       </div>
       <div className="absolute right-[40px]">
@@ -74,11 +69,11 @@ function Text() {
   return (
     <div className="grid grid-rows-3 grid-flow-col gap-4 p-8">
       <div>
-        <h2 className="text-3xl pb-8">Let's get in touch.</h2>
+        <h2 className="text-3xl font-extrabold pb-8">Let's get in touch.</h2>
         <p className="text-2xl underline">i.ihadian@gmail.com</p>
       </div>
       <div className="grid grid-rows-subgrid gap-4 row-span-2">
-        <p className=" pt-11">Socials</p>
+        <p className="font-bold pt-11">Socials</p>
         <div className="grid grid-cols-3 gap-4">
           <div>
             <Link
