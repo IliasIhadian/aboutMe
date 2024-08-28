@@ -42,7 +42,7 @@ export default function Home() {
             <div className="col-span-2">
               <Image
                 src="/foreground.png"
-                alt={"alt"}
+                alt={"paper ship"}
                 width="900"
                 height="900"
               ></Image>
@@ -54,7 +54,7 @@ export default function Home() {
           <Navbar animate={"h"}></Navbar>
           <Image
             src="/foreground.png"
-            alt={"alt"}
+            alt={"paper ship"}
             width="900"
             height="900"
           ></Image>

@@ -22,10 +22,10 @@ export const metadata: Metadata = {
   ],
   title: "Ilias Ihadian",
   description: "Portfolio by Ilias Ihadian",
-  icons: "icon.ico",
+  icons: "favicon.ico",
   openGraph: {
     description: "Hi I am Ilias Ihadian and this is my portfolio website.",
-    images: "",
+    images: "/foreground.png",
   },
 };
 
