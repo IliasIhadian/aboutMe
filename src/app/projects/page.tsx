@@ -74,129 +74,143 @@ export default function projects() {
 
 function Cards() {
   return (
-    <div className="grid grid-cols-3 gap-4 p-8">
-      <div>
-        <Card className="">
-          <CardHeader>
-            <CardTitle>Bachelorthesis</CardTitle>
-            <CardDescription>My bachelorthesis</CardDescription>
-          </CardHeader>
-          <CardContent>
-            <p className="text-sm">
-              Implemented an alpha matting algorithm called the Local and
-              Nonlocal Color Line Model, making it accessible for public use.
-            </p>
-          </CardContent>
-          <CardFooter className="gap-2">
-            <Link
-              href="https://github.com/IliasIhadian/Bachelorthesis/"
-              passHref={true}
-            >
-              <Button>my thesis</Button>
-            </Link>
-          </CardFooter>
-        </Card>
+    <>
+      <div className="grid grid-cols-3 gap-4 p-8 items-stretch">
+        <div className="h-full">
+          <Card>
+            <CardHeader>
+              <CardTitle>REM</CardTitle>
+              <CardDescription className="text-green-500">
+                NEW & HOT
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              <p className="text-sm">
+                Based on CFM I build a website which cuts out the foreground of
+                an image based on the image itself and its Trimap.
+              </p>
+            </CardContent>
+            <CardFooter>
+              <Link href="https://rem.ihadian.com" passHref={true}>
+                <Button className="bg-green-500">REM</Button>
+              </Link>
+            </CardFooter>
+          </Card>
+        </div>
+        <div className="h-full">
+          <Card>
+            <CardHeader>
+              <CardTitle>Bachelorthesis</CardTitle>
+              <CardDescription>My bachelorthesis</CardDescription>
+            </CardHeader>
+            <CardContent>
+              <p className="text-sm">
+                Implemented an alpha matting algorithm called the Local and
+                Nonlocal Color Line Model, making it accessible for public use.
+              </p>
+            </CardContent>
+            <CardFooter>
+              <Link
+                href="https://github.com/IliasIhadian/Bachelorthesis/"
+                passHref={true}
+              >
+                <Button>Thesis</Button>
+              </Link>
+            </CardFooter>
+          </Card>
+        </div>
+        <div className="h-full ">
+          <Card>
+            <CardHeader>
+              <CardTitle>Travellist</CardTitle>
+              <CardDescription>
+                A packinglist for your next travel!
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              <p className="text-sm">
+                Implementation of an travellist with React, Node.js and
+                Javascript
+              </p>
+            </CardContent>
+            <CardFooter className="flex mb-0 place-self-stretch">
+              <Link href="https://project.ihadian.com/" passHref={true}>
+                <Button>Travellist</Button>
+              </Link>
+            </CardFooter>
+          </Card>
+        </div>
+        <div className="h-full">
+          <Card>
+            <CardHeader>
+              <CardTitle>Codeforces Tournaments</CardTitle>
+              <CardDescription>Programming Contests</CardDescription>
+            </CardHeader>
+            <CardContent>
+              <p className="text-sm">Partaking in programming tournaments</p>
+            </CardContent>
+            <CardFooter>
+              <Link
+                href="https://github.com/IliasIhadian/CodeForces/"
+                passHref={true}
+              >
+                <Button>Codeforce-Submissions</Button>
+              </Link>
+            </CardFooter>
+          </Card>
+        </div>
+        <div>
+          <Card>
+            <CardHeader>
+              <CardTitle>Alpha-matting Algorithms</CardTitle>
+              <CardDescription>KNN-Matting & CF-Matting</CardDescription>
+            </CardHeader>
+            <CardContent>
+              <p className="text-sm">
+                Implemented K-Nearest-Neighbor-matting and Closed-Form-matting.
+              </p>
+            </CardContent>
+            <CardFooter className="flex justify-between">
+              <Link
+                href="https://github.com/IliasIhadian/KNN-Matting"
+                passHref={true}
+              >
+                <Button>KNNM</Button>
+              </Link>
+              <Link
+                href="https://github.com/IliasIhadian/Closed-Form-Matting"
+                passHref={true}
+              >
+                <Button>CFM</Button>
+              </Link>
+            </CardFooter>
+          </Card>
+        </div>
+
+        <div>
+          <Card className="">
+            <CardHeader>
+              <CardTitle>University Project</CardTitle>
+              <CardDescription>An Web-application</CardDescription>
+            </CardHeader>
+            <CardContent>
+              <p className="text-sm">
+                Collaboratively developed a web application for vacation
+                registration as part of a team..
+              </p>
+            </CardContent>
+            <CardFooter>
+              <Link
+                href="https://github.com/IliasIhadian/pra-b49"
+                passHref={true}
+              >
+                <Button>University project</Button>
+              </Link>
+            </CardFooter>
+          </Card>
+        </div>
       </div>
-      <div className="">
-        <Card className="">
-          <CardHeader>
-            <CardTitle>Travellist</CardTitle>
-            <CardDescription>
-              A packinglist for your next travel!
-            </CardDescription>
-          </CardHeader>
-          <CardContent>
-            <p className="text-sm">
-              Implementation of an travellist with React, Node.js and Javascript
-            </p>
-          </CardContent>
-          <CardFooter>
-            <Link href="https://project.ihadian.com/" passHref={true}>
-              <Button>ihadian.com</Button>
-            </Link>
-          </CardFooter>
-        </Card>
-      </div>
-      <div>
-        <Card className="">
-          <CardHeader>
-            <CardTitle>Codeforces Tournaments</CardTitle>
-            <CardDescription>Programming Contests</CardDescription>
-          </CardHeader>
-          <CardContent>
-            <p className="text-sm">Partaking in programming tournaments</p>
-          </CardContent>
-          <CardFooter>
-            <Link
-              href="https://github.com/IliasIhadian/CodeForces/"
-              passHref={true}
-            >
-              <Button>codeforce submissions</Button>
-            </Link>
-          </CardFooter>
-        </Card>
-      </div>
-      <div>
-        <Card className="">
-          <CardHeader>
-            <CardTitle>K-Nearest-Neighbor-Matting(KNNM)</CardTitle>
-            <CardDescription>An alphamatting algorithm</CardDescription>
-          </CardHeader>
-          <CardContent>
-            <p className="text-sm">Implemented K-Nearest-Neighbor.</p>
-          </CardContent>
-          <CardFooter>
-            <Link
-              href="https://github.com/IliasIhadian/KNN-Matting"
-              passHref={true}
-            >
-              <Button>KNNM</Button>
-            </Link>
-          </CardFooter>
-        </Card>
-      </div>
-      <div>
-        <Card className="">
-          <CardHeader>
-            <CardTitle>Closed-Form-Matting(CFM)</CardTitle>
-            <CardDescription>An alphamatting algorithm</CardDescription>
-          </CardHeader>
-          <CardContent>
-            <p className="text-sm">Implemented Closed-Form-Matting</p>
-          </CardContent>
-          <CardFooter>
-            <Link
-              href="https://github.com/IliasIhadian/Closed-Form-Matting"
-              passHref={true}
-            >
-              <Button>CFM</Button>
-            </Link>
-          </CardFooter>
-        </Card>
-      </div>
-      <div>
-        <Card className="">
-          <CardHeader>
-            <CardTitle>University Project</CardTitle>
-            <CardDescription>An Web-application</CardDescription>
-          </CardHeader>
-          <CardContent>
-            <p className="text-sm">
-              Collaboratively developed a web application for vacation
-              registration as part of a team..
-            </p>
-          </CardContent>
-          <CardFooter>
-            <Link
-              href="https://github.com/IliasIhadian/pra-b49"
-              passHref={true}
-            >
-              <Button>University project</Button>
-            </Link>
-          </CardFooter>
-        </Card>
-      </div>
-    </div>
+    </>
   );
 }
 
