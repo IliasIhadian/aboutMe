@@ -76,6 +76,59 @@ function Cards() {
   return (
     <>
       <div className="grid grid-cols-3 gap-4 p-8 items-stretch">
+        <div className="h-full ">
+          <Card>
+            <CardHeader>
+              <CardTitle>Realitycheckjournal</CardTitle>
+              <CardDescription className="text-green-500">
+                NEW & HOT
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              <p className="text-sm">
+                I build a redesign based on the{" "}
+                <span>
+                  <a href="https://realitycheckjournal.com">
+                    realitycheckjournal.com
+                  </a>
+                </span>
+                . I kept an minimalistic and simple style.
+              </p>
+            </CardContent>
+            <CardFooter>
+              <Link
+                href="https://realitycheckjournal.vercel.app"
+                passHref={true}
+              >
+                <Button className="bg-green-500">realitycheckjournal</Button>
+              </Link>
+            </CardFooter>
+          </Card>
+        </div>
+        <div className="h-full">
+          <Card>
+            <CardHeader>
+              <CardTitle>YEUTHEWORLD</CardTitle>
+              <CardDescription className="text-green-500">
+                NEW & HOT
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              <p className="text-sm">
+                I build a redesign based on the{" "}
+                <span>
+                  <a href="https://yeutheworld.com">yeutheworld.com</a>
+                </span>
+                . I tried to keep a futuristic style.
+              </p>
+            </CardContent>
+            <CardFooter>
+              <Link href="https://yeu-rose.vercel.app" passHref={true}>
+                <Button className="bg-green-500">YEUTHEWORLD</Button>
+              </Link>
+            </CardFooter>
+          </Card>
+        </div>
         <div className="h-full">
           <Card>
             <CardHeader>
@@ -217,6 +270,77 @@ function Cards() {
 function CardsTabletAndBelow() {
   return (
     <div className="grid p-4">
+      <div className="p-4 ">
+        <Card>
+          <CardHeader>
+            <CardTitle>Realitycheckjournal</CardTitle>
+            <CardDescription className="text-green-500">
+              NEW & HOT
+            </CardDescription>
+          </CardHeader>
+          <CardContent>
+            <p className="text-sm">
+              I build a redesign based on the{" "}
+              <span>
+                <a href="https://realitycheckjournal.com">
+                  realitycheckjournal.com
+                </a>
+              </span>
+              . I kept an minimalistic and simple style.
+            </p>
+          </CardContent>
+          <CardFooter>
+            <Link href="https://realitycheckjournal.vercel.app" passHref={true}>
+              <Button className="bg-green-500">realitycheckjournal</Button>
+            </Link>
+          </CardFooter>
+        </Card>
+      </div>
+      <div className="p-4">
+        <Card>
+          <CardHeader>
+            <CardTitle>YEUTHEWORLD</CardTitle>
+            <CardDescription className="text-green-500">
+              NEW & HOT
+            </CardDescription>
+          </CardHeader>
+          <CardContent>
+            <p className="text-sm">
+              I build a redesign based on the{" "}
+              <span>
+                <a href="https://yeutheworld.com">yeutheworld.com</a>
+              </span>
+              . I tried to keep a futuristic style.
+            </p>
+          </CardContent>
+          <CardFooter>
+            <Link href="https://yeu-rose.vercel.app" passHref={true}>
+              <Button className="bg-green-500">YEUTHEWORLD</Button>
+            </Link>
+          </CardFooter>
+        </Card>
+      </div>
+      <div className="p-4">
+        <Card>
+          <CardHeader>
+            <CardTitle>REM</CardTitle>
+            <CardDescription className="text-green-500">
+              NEW & HOT
+            </CardDescription>
+          </CardHeader>
+          <CardContent>
+            <p className="text-sm">
+              Based on CFM I build a website which cuts out the foreground of an
+              image based on the image itself and its Trimap.
+            </p>
+          </CardContent>
+          <CardFooter>
+            <Link href="https://rem.ihadian.com" passHref={true}>
+              <Button className="bg-green-500">REM</Button>
+            </Link>
+          </CardFooter>
+        </Card>
+      </div>
       <div className=" p-4">
         <Card className="">
           <CardHeader>
